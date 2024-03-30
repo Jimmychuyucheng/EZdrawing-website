@@ -2,3 +2,4 @@ Flask==3.0.2
 matplotlib==3.4.3
 numpy==1.26.4
 gunicorn==21.2.0
+pillow>=10.2.0 # not directly required, pinned by Snyk to avoid a vulnerability
