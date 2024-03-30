@@ -1,0 +1,185 @@
+/*靜態檔案(static files)例如:照片,HTML,CSS,JavaScript
+要放在static目錄中，不然就要再建立application物件時透過參數指定*/
+/*靜態檔案不會跑程式，會直接被送到前端*/
+
+@charset "utf-8";
+
+
+body{
+    background-color:rgb(216, 214, 209);
+    background-image: url(/static/image/star.png);
+    background-repeat: repeat-x;
+    background-size: 300px;
+    font-size:16px;
+}
+.bold-center {
+    font-weight: bold;
+    text-align: center; 
+}
+.center {
+    text-align: center;
+}
+
+h1 {
+    font-size: 85px;
+    text-align:center;
+    background-image:url(/static/gif/math.gif);
+    background-repeat:no-repeat;
+    background-position:center ;
+    color:transparent;
+    background-clip:text ;
+    filter:drop-shadow(10px 5px 30px  rgb(197, 182, 182))
+}
+h2 {
+    font-size: 50px;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 2px dotted #09af33;
+    border-left: 10px solid #12de75;
+    color: #236244;
+    background-color: rgba(191, 175, 175, 0.5);
+}
+h4{
+    text-align:center;
+    font-size:25px
+}
+button{ 
+    background-color: #10c065;
+    border-radius:40px ;
+    width:130px
+}
+button:active{
+    background-color: #0a7b46;
+}
+button:hover{
+    background-color: #0f0;
+}
+ul {
+    columns: 4; /* 將列表分為四列 */
+    rows :2
+    column-gap: 25px; /* 列間距 */
+}
+li {
+    display: inline-block; /* 將列表項目設置為內聯塊 */
+    width: 90%; /* 使列表項目填滿列寬 */
+    text-align: center;
+    font-size: 30px;
+}
+a {
+    color: #0a7b46; /* 將超連結的字體顏色設置為藍色 */
+    text-decoration: none; /* 移除超連結的底線 */
+}
+
+a:hover {
+    color: rgb(101, 226, 166); /* 將超連結的字體顏色設置為紅色，當滑鼠懸停在超連結上時 */
+}
+.form-container {
+    display:flex;
+    justify-content: center; /* 將內容水平置中 */
+    align-items: center; /* 將內容垂直置中 */
+    flex-wrap: wrap; /* 如果表單太寬，則換行顯示 */
+}
+.form-container form {
+    margin: 10px auto; /* 给表单之间一些间距，并水平居中 */
+    text-align: center; /* 文本居中 */
+    width: 450px; /* 设置表单宽度 */
+    padding: 20px; /* 增加内边距 */
+    border-radius: 10px; /* 添加边框圆角 */
+    background-color: #f0f0f0; /* 添加背景色 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    margin-right: 80px;
+    margin-left: 80px;
+}
+.form-container form {
+    margin: 10px; /* 給表單之間一些間距*/
+    text-align: center;
+    margin-right: 80px;
+    margin-left: 80px;
+}
+.form-container h4 {
+    margin-bottom: 10px; /*調整標題下方間距*/
+}
+.form-container input,
+.form-container button {
+    margin-bottom: 5px; /* 調整輸入框和按鈕下方間距 */
+    width: 130px; /* 調整輸入框和按鈕的寬度 */
+}
+#progressBar {
+    width: 100%;
+    background-color: #f1f1f1;
+}
+#progressBar>div {
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    background: linear-gradient(90deg, #0f0, #0ff);
+    animation:ease-in-out
+}
+.image-container {
+    display: flex;
+    justify-content: space-between; /* 图片之间的间距相等 */
+    margin-bottom: 20px; /* 设置图片之间的垂直间距 */
+}
+.image-container img {
+    width: 430px; /* 设置宽度为 190px */
+    height: auto; /* 高度自动等比例缩放 */
+    border-radius: 10px;
+}
+@keyframes progress-animation {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+@media (max-width:500px){
+    /* 手機版 */
+    h1{
+        font-size: 60px;
+    }
+    body{
+        background-color:rgb(216, 214, 209);
+        background-image: url(/static/image/star.png);
+        background-repeat: repeat-x;
+        background-size: 200px;
+    }
+    img[src=""] {
+        display: none;
+        /* display: none; 如果没有 src 属性，则隐藏图片 */
+    }
+
+    img[src] {
+        width: 360px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    .form-container {
+        display: flex;
+        justify-content: flex-start; /* 將內容靠左對齊 */
+        align-items: center; /* 將內容垂直置中 */
+        flex-wrap: wrap; /* 如果表單太寬，則換行顯示 */
+    }
+
+    .form-container form {
+        margin: 10px; /* 給表單之間一些間距*/
+        text-align: center;
+        width:360px;
+    }
+
+    .form-container h4 {
+        margin-bottom: 5px; /* 調整標題下方間距*/
+    }
+
+    .form-container input[type="text"],
+    .form-container button {
+        margin-bottom: 5px; /* 調整輸入框和按鈕下方間距 */
+        width: 80px; /* 調整輸入框的寬度 */
+    } 
+
+    .form-container button {
+        width: auto; /* 保持按鈕寬度自動調整 */
+    }
+} 
