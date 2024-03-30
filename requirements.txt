@@ -1,10 +1,4 @@
-Flask
-render_template
-requests
-base64
-io
-numpy
-matplotlib
-Figure
-FigureCanvasAgg
-Gunicorn
+Flask==2.0.1
+matplotlib==3.4.3
+numpy==1.21.2
+gunicorn==20.1.0
