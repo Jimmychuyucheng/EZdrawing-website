@@ -1,2 +1,10 @@
 Flask
+render_template
+requests
+base64
+io
+numpy
+matplotlib
+Figure
+FigureCanvasAgg
 Gunicorn
