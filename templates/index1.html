@@ -12,6 +12,7 @@
     <meta name="description" content="這是一個完全免費的客製化繪圖工具">
     <link href="/static/css/style.css" rel="stylesheet" media="All" type="text/css">
     <script src="/static/JS/index1.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </head>
 
 <body>
@@ -47,7 +48,7 @@
     <h2>橢圓</h2>
 <div class="form-container">
     <form action="/calculate_elipse">
-        <h4>橢圓方程式<br>((x-h)<sup>2</sup>/a<sup>2</sup> + (y-k)<sup>2</sup>/b<sup>2</sup>=1)</h4>
+        <h4>橢圓方程式<br> $$\frac{(x-h)^2}{a^2} + \frac{(y-k)^2}{b^2} = 1$$</h4>
         a<sup>2</sup><input type="text" name="a2">
         b<sup>2</sup><input type="text" name="b2"><br>
         h<input type="text" name="h" value="0">
@@ -61,14 +62,15 @@
     <h2>拋物線</h2>
 <div class="form-container">
     <form action="/calculate_parabola1">
-        <h4>上下開口拋物線<br>((x-h)<sup>2</sup>=4c(y-k))</h4>
+        <h4>上下開口拋物線
+        \[ (x-h)^2 = 4c(y-k) \]　</h4>
         4c<input type="text" name="p">
         h<input type="text" name="h" value="0"><br>
         k<input type="text" name="k" value="0"><br>
         <button title="Let's go!">開始計算結果</button>
      </form> 
     <form action="/calculate_parabola2">
-        <h4>左右開口拋物線<br>((y-k)<sup>2</sup>=4c(x-h))</h4>
+        <h4>左右開口拋物線<br>\[ (y-k)^2 = 4c(x-h) \]</h4>
         4c<input type="text" name="p">
         h<input type="text" name="h" value="0"><br>
         k<input type="text" name="k" value="0"><br>
@@ -84,7 +86,7 @@
     <h2>雙曲線</h2>
 <div class="form-container">
     <form action="/calculate_hyperbola1">
-        <h4>左右開口雙曲線方程式<br>((x-h)<sup>2</sup>/a<sup>2</sup> - (y-k)<sup>2</sup>/b<sup>2</sup>=1)</h4>
+        <h4>左右開口雙曲線方程式<br>\[ \frac{(x-h)^2}{a^2} - \frac{(y-k)^2}{b^2} = 1 \]</h4>
         a<sup>2</sup>(x下係數)<input type="text" name="a2"><br>
         b<sup>2</sup>(y下係數)<input type="text" name="b2"><br>
         h<input type="text" name="h" value="0"><br>
@@ -92,7 +94,7 @@
         <button title="Let's go!">開始計算結果</button>
      </form>
     <form action="/calculate_hyperbola2">
-        <h4>上下開口雙曲線方程式<br>((y-k)<sup>2</sup>/a<sup>2</sup>-(x-h)<sup>2</sup>/b<sup>2</sup>=1)</h4>
+        <h4>上下開口雙曲線方程式<br>\[ \frac{(y-k)^2}{a^2} - \frac{(x-h)^2}{b^2} = 1 \]</h4>
         a<sup>2</sup>(y下係數)<input type="text" name="a2"><br>
         b<sup>2</sup>(x下係數)<input type="text" name="b2"><br>
         h<input type="text" name="h" value="0"><br>
@@ -107,11 +109,11 @@
     <h3>拋物線</h3><hr> 
     <div class="form-container">
     <form action="/paragif" onsubmit="startProgress()">
-        <h4>與一直線(x or y=m)相切以及<br>和一圓內切之圓心軌跡方程式</h4>
+        <h4>與一直線(x=m or y=m)相切以及<br>和一圓內切之圓心軌跡方程式</h4>
         x or y<input type=""text" name="x_or_y" value="y"><br>
         m<input type="text" name="m" value="5"><br>
-        C2:X座標<input type="text" name="c_0_x" value="2"><br>
-        C2:y座標<input type="text" name="c_0_y" value="0"><br>
+        C2:X坐標<input type="text" name="c_0_x" value="2"><br>
+        C2:y坐標<input type="text" name="c_0_y" value="0"><br>
         C2:半徑<input type="text" name="c_0_r" value="1"><br>
         <button title="Let's go!">開始計算結果</button>
     </form>
@@ -124,11 +126,11 @@
     <div class="form-container">
         <form action="/ellipsegif">
             <h4>與兩圓相切之圓心軌跡方程式<br>(大圓C1包小圓C2)<br></h4>
-            C1:X座標<input type="text" name="x_b" value="-1"><br>
-            C1:y座標<input type="text" name="y_b" value="0"><br>
+            C1:X坐標<input type="text" name="x_b" value="-1"><br>
+            C1:y坐標<input type="text" name="y_b" value="0"><br>
             C1:半徑<input type="text" name="r_b" value="4"><br>
-            C2:X座標<input type="text" name="x_s" value="1"><br>
-            C2:y座標<input type="text" name="y_s" value="0"><br>
+            C2:X坐標<input type="text" name="x_s" value="1"><br>
+            C2:y坐標<input type="text" name="y_s" value="0"><br>
             C2:半徑<input type="text" name="r_s" value="1"><br>
             <button title="Let's go!">開始計算結果</button>
         </form>
@@ -138,11 +140,11 @@
     <div class="form-container">
         <form action="/hypergif" onsubmit="startProgress()">
             <h4>與兩圓均內切或外切<br>之圓新軌跡方程式<br></h4>
-            C1:X座標<input type="text" name="x_b" value="0"><br>
-            C1:y座標<input type="text" name="y_b" value="-1"><br>
+            C1:X坐標<input type="text" name="x_b" value="0"><br>
+            C1:y坐標<input type="text" name="y_b" value="-1"><br>
             C1:半徑<input type="text" name="r_b" value="7"><br>
-            C2:X座標<input type="text" name="x_s" value="0"><br>
-            C2:y座標<input type="text" name="y_s" value="9"><br>
+            C2:X坐標<input type="text" name="x_s" value="0"><br>
+            C2:y坐標<input type="text" name="y_s" value="9"><br>
             C2:半徑<input type="text" name="r_s" value="1"><br>
             <button title="Let's go!">開始計算結果</button>
         </form>

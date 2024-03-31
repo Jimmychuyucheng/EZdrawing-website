@@ -121,10 +121,10 @@ a:hover {
     justify-content: space-between; /* 图片之间的间距相等 */
     margin-bottom: 20px; /* 设置图片之间的垂直间距 */
 }
-.image-container img {
+ .image-container img {
     width: 430px; /* 设置宽度为 190px */
     height: auto; /* 高度自动等比例缩放 */
-    border-radius: 10px;
+    border-radius: 10px; */
 }
 @keyframes progress-animation {
     from {
@@ -134,6 +134,21 @@ a:hover {
         width: 100%;
     }
 }
+
+@media (min-width:1000px){
+  .image-container {
+      display: flex;
+      justify-content: space-between; /* 图片之间的间距相等 */
+      margin-bottom: 20px;
+  }
+  .image-container img{
+    width:40%;
+    height:auto;
+    border-radius:10px;
+    margin:2%;
+  }
+}
+
 @media (max-width:500px){
     /* 手機版 */
     h1{
