@@ -25,10 +25,10 @@ h1 {
     text-align:center;
     background-image:url(/static/gif/math.gif);
     background-repeat:no-repeat;
-    background-position:center ;
+    background-position:center;
     color:transparent;
-    background-clip:text ;
-    filter:drop-shadow(10px 5px 30px  rgb(197, 182, 182))
+    background-clip:text;
+    filter:drop-shadow(10px 5px 30px  rgb(197, 182, 182));
 }
 h2 {
     font-size: 50px;
