@@ -6,6 +6,7 @@
 ![EZdrawing心智圖](https://hackmd.io/_uploads/BJeEiTH1R.png)
 
 附圖為本次專案的心智圖<br>右側說明開發網站的過程，從HTML撰寫前端使用者介面、CSS美編與排版設計，到後端繪圖與動畫生成函式庫編寫。最後使用Flask API網頁框架設計相應路由，串通使用者端和數據端的溝通。<br>左側則是部署網站的過程，從使用Replit作為編撰與修改程式的整合開發環境（IDE），並將資料作為檔案存放在Github上。最後，透過render.com提供的網路服務，獲得一個公開的連結與IP位置，讓所有人都能夠拜訪並體驗網站內的功能。
+web link: [ezdrawing-website.onrender.com/](https://ezdrawing-website.onrender.com/)
 
 
 # *Flask API主程序app.py檔*
